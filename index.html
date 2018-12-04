@@ -61,12 +61,13 @@
       function getScatterplotConfig() {
         let width = 600;
         let height = 400;
+        var margin = { top: 10, right: 50, bottom: 130, left: 50 }
         let container = d3.select("#Scatterplot")
         container
             .attr("width", width)
             .attr("height", height)
         console.log("width", width, "height", height)
-        return { width, height, container }
+        return { width, height, margin, container }
       }
 
       function getChartConfig() {
@@ -186,6 +187,26 @@
           .call(axisY)
       }
 
+      function drawAxesforScatterplot(ratings, scales, config){
+        let {xScale, yScale} = scales
+        let {container, margin, height} = config;
+        let axisX = d3.axisBottom(xScale)
+                      .ticks(5)
+
+        container.append("g")
+          .style("transform",
+              `translate(${margin.left}px,${height - margin.bottom}px)`
+          )
+          .call(axisX)
+
+        let axisY = d3.axisLeft(yScale)
+        container.append("g")
+          .style("transform",
+              `translate(${margin.left}px, ${margin.top}px)`
+          )
+          .call(axisY)
+      }
+
       function drawBarChart(ratings) {
         let config = getChartConfig();
         let scales = getChartScales(ratings, config);
@@ -202,8 +223,10 @@
         let container = config.container
         console.log("w: ", w, "h: ", h)
         // var formatPercent = d3.format('.2%')
-        var body = d3.select('body')
-        var margin = { top: 10, right: 50, bottom: 10, left: 50 }
+        var body = d3.select('Scatterplot')
+        var margin = config.margin
+        let bodyHeight = h - margin.top - margin.bottom
+        let bodyWidth = w - margin.left - margin.right
         // Scales
         // var colorScale = d3.scaleOrdinal(d3.category20)
                             // .range([0,400])
@@ -213,13 +236,15 @@
           .interpolator(d3.interpolateRainbow);
 
         var xScale = d3.scaleLinear()
-        //   .domain([0, d3.max(ratings, d => d.ratingsCount )])
-          .domain([0, 120000])
-          .range([0,w - 100])
+          .domain([0, d3.max(ratings, d => parseInt(d.ratingsCount) )])
+          // .domain([0, 120000])
+          .range([0, bodyWidth])
+          console.log("xMax: ", d3.max(ratings, d => parseInt(d.ratingsCount) ))
         var yScale = d3.scaleLinear()
-        //   .domain([0,  d3.max(ratings, d => d.reviewsCount )])
-          .domain([0, 2000])
-          .range([h-100,100])
+          .domain([0,  d3.max(ratings, d => parseInt(d.reviewsCount) )])
+          // .domain([0, 2000])
+          .range([bodyHeight, 0])
+          console.log("yMax: ", d3.max(ratings, d => parseInt(d.reviewsCount) ))
       	// SVG
       	var svg = container.append('svg')
       	    .attr('height',h + margin.top + margin.bottom)
@@ -228,16 +253,17 @@
       	    .attr('width',w)
       	  .append('g')
       	    .attr('transform','translate(' + margin.left + ',' + margin.top + ')')
-      	// X-axis
-      	var xAxis = d3.axisBottom(xScale)
-      	  // .tickFormat(formatPercent)
-          // .orient("bottom")
-      	  .ticks(5)
-        // Y-axis
-      	var yAxis = d3.axisLeft(yScale)
-      	  // .tickFormat(formatPercent)
-          // .orient("left")
-      	  .ticks(5)
+
+      	// // X-axis
+      	// var xAxis = d3.axisBottom(xScale)
+      	//   // .tickFormat(formatPercent)
+        //   // .orient("bottom")
+      	//   .ticks(5)
+        // // Y-axis
+      	// var yAxis = d3.axisLeft(yScale)
+      	//   // .tickFormat(formatPercent)
+        //   // .orient("left")
+      	//   .ticks(5)
         // Circles
         var circles = svg.selectAll('circle')
             .data(ratings)
@@ -267,33 +293,36 @@
             .text(function (d) { return d.author +
                                  '\nReviewsCount: ' + d.reviewsCount +
                                  '\nRatingsCount: ' + d.ratingsCount })
-        // X-axis
-        svg.append('g')
-            .attr('class','axis')
-            .attr('transform', 'translate(' + margin.left + "," + h + ')')
-            // .attr('transform', 'translate(0,' + margin.bottom + 10 + ')')
-            .call(xAxis)
-          .append('text') // X-axis Label
-            .attr('class','label')
-            .attr('y',10)
-            .attr('x',0)
-            .attr('transform','rotate(-180)')
-            // .attr('dy','.71em')
-            .style('text-anchor','end')
-            .text('Annualized Standard Deviation')
-        // Y-axis
-        svg.append('g')
-            .attr('class', 'axis')
-            // .attr('transform', 'translate(' + margin.left + "," + margin.top + ')')
-            .call(yAxis)
-          .append('text') // y-axis Label
-            .attr('class','label')
-            // .attr('transform','rotate(-90)')
-            .attr('x',0)
-            .attr('y',10)
-            // .attr('dy','.71em')
-            .style('text-anchor','end')
-            .text('Annualized Return')
+        // // X-axis
+        // svg.append('g')
+        //     .attr('class','axis')
+        //     .attr('transform', 'translate(' + margin.left + "," + h + ')')
+        //     // .attr('transform', 'translate(0,' + margin.bottom + 10 + ')')
+        //     .call(xAxis)
+        //   .append('text') // X-axis Label
+        //     .attr('class','label')
+        //     .attr('y',10)
+        //     .attr('x',0)
+        //     .attr('transform','rotate(-180)')
+        //     // .attr('dy','.71em')
+        //     .style('text-anchor','end')
+        //     .text('Annualized Standard Deviation')
+        // // Y-axis
+        // svg.append('g')
+        //     .attr('class', 'axis')
+        //     // .attr('transform', 'translate(' + margin.left + "," + margin.top + ')')
+        //     .call(yAxis)
+        //   .append('text') // y-axis Label
+        //     .attr('class','label')
+        //     // .attr('transform','rotate(-90)')
+        //     .attr('x',0)
+        //     .attr('y',10)
+        //     // .attr('dy','.71em')
+        //     .style('text-anchor','end')
+        //     .text('Annualized Return')
+
+        let scales = {xScale, yScale}
+        drawAxesforScatterplot(ratings, scales, config);
       }
 
       function showData() {
@@ -304,7 +333,7 @@
 
         drawBarChart(ratingBar)
         // getScatterplotConfig()
-        drawScatterplot(ratings)
+        drawScatterplot(ratings.slice(0,10000))
 
       }
 
