@@ -36,19 +36,7 @@
           Menu
           <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#books">Books</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#authors">Authors</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#reviewers">Reviewers</a>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </nav>
 
@@ -75,138 +63,26 @@ alt="">
 <h2 class="text-center text-uppercase text-secondary mb-0">Top 10 highly rated books</h2>
 <svg id="BookChart"></svg>
 <h3 class="font-weight-light mb-0"> "To Kill a Mocking Bird" is found to be most popular book, going by the ratings it has got in total. The author of the book is Harper Lee. It was published in the year 1960. Another interesting fact from this visualization is that Anne Frank has been the author for two books in the top 10 most popular books.   </h3>
+<br>
 <h3 class="font-weight-light mb-0"> Let's now look at popular authors, based on average ratings they got, for all the books under consideration. This is especially useful to determine if authors who wrote popular (highly rated) books are liked for their work in general. Or were there one time wonders? This is especially true, if an author X wrote a highly rated book, followed by a series of not-so-good books. His overall popularity would now be below average.</h3>
 <br>
 <br>
 <h2 class="text-center text-uppercase text-secondary mb-0">Popularity of Authors based on Average ratings over the total number of ratings they got</h2>
 <svg id="Scatterplot"></svg>
 <h3 class="font-weight-light mb-0"> From this we see that Jeanine Heil is the most highly rated author, although she has been rated only once. While there are other authors like J.K. Rowling whose average rating is the highest at 4.4, with the most number of ratings in total. Ironically, Harper Lee, who wrote the most popular book, is behind many other authors like J.K. Rowling, Jane Austen, J.R.R. Tolkein in terms of overall popularity. </h3>
+<br>
 <h3 class="font-weight-light mb-0"> Considering the most popular author, J.K. Rowling, we can look at the word cloud of the reviews she has got as shown below. </h3>
 <br>
 <svg id="wordcount"></svg>
+<h3 class="font-weight-light mb-0"> A word cloud is a very informative visualization when it comes to texts and words. Most repeated words get a bigger space in the word cloud. <h3>
+<br>
+<br>
+<h3 class="font-weight-light mb-0"> This was the story of popular books and authors that have been listed on GoodReads. Hope you liked the story as much as we did. Start reading today! </h3>
     </div>
     </header>
 
-    <!-- Books Grid Section -->
-    <section class="books" id="books">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Books</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/popularbooks.png"  display="block"
-    margin-left="auto"
-    margin-right="auto"
-
- alt="">
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/revrate.png" display="block"
-    margin-left="auto"
-    margin-right="auto" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-7">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/jkrowling.png" display="block"
-    margin-left="auto"
-    margin-right="auto" alt="">
-            </a>
-          </div>
 
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Authors Section -->
-    <section class="bg-primary text-white mb-0" id="authors">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">Authors</h2>
-        <hr class="star-light mb-5">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Authors are the creators and inventors of books. Most of the time writing strats with a seed of thought and the inception leads to the story.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Avid readers can also identify authors just by reading a lot of their work, even if names aren't disclosed to start with.</p>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-md-6 col-lg-4" align="center">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/popularauthors.png" x="50" y="50" align="center" alt="">
-            </a>
-          </div>
-
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/leastpopular.png" alt="">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-              <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                <i class="fas fa-search-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/mostpopularauthors.png" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="reviewers">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Reviewers</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/reviewers.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer text-center">
@@ -250,7 +126,7 @@ alt="">
           <div class="col-md-4">
             <h4 class="text-uppercase mb-4">About Us</h4>
             <p class="lead mb-0">We are visualization enthusiasts. Please find our github link below
-              <a href="https://github.com/yichunyeh/BookReview">Happy Reading!</a>.</p>
+              <a href="https://nyu-vis-fall2018.github.io/storytelling-group-19/">Happy Reading!</a>.</p>
           </div>
         </div>
       </div>
@@ -265,179 +141,7 @@ alt="">
       </a>
     </div>
 
-    <!-- Portfolio Modals -->
 
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-1">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Popular Books</h2>
-              <hr class="star-dark mb-5">
-              <!--img class="img-fluid mb-5" src="img/portfolio/book1.png" alt=""-->
-              <svg id="BookChart"></svg>
-              <p class="mb-5">Books are ranked according to their popularity in terms of average ratings they got</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-2">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Popular Authors</h2>
-              <hr class="star-dark mb-5">
-              <div class="mainView">
-                  <div>
-                      <h3>Most famous author</h3>
-                      <svg id="AuthorChart"></svg>
-                  </div>
-
-              </div>
-              <!--img class="img-fluid mb-5" src="img/portfolio/author1.png" alt=""-->
-              <p class="mb-5">Popular authors are determined based on the combination of ratings and reviews.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-3">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Least Popular Authors</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/authormin.png" alt="">
-              <p class="mb-5">These are the authors who got least ratings. </p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-4">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Reviews and Ratings, relationship!</h2>
-              <hr class="star-dark mb-5">
-              <div>
-                  <h3>Relationship between reviewsCount and ratingsCount</h3>
-                  <svg id="Scatterplot"></svg>
-                  <!--svg id="wordcount"></svg-->
-              </div>
-              <!--img class="img-fluid mb-5" src="img/portfolio/reviewsandratings.png" alt=""-->
-              <p class="mb-5">We try to examine the relationship between reviews and ratings for books.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-5">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Authors with maximum ratings!</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/maxauthors.png" alt="">
-              <p class="mb-5">These are the authors that got most ratings</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-6">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Reviewers stats of ratings and reviews</h2>
-              <hr class="star-dark mb-5">
-              <img class="img-fluid mb-5" src="img/portfolio/reviewerschart.png" alt="">
-              <p class="mb-5">We look at how reviewers generally rate and reviews books to detect biases if any.</p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<!--portfolio modal 7-->
-    <div class="portfolio-modal mfp-hide" id="portfolio-modal-7">
-      <div class="portfolio-modal-dialog bg-white">
-        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
-          <i class="fa fa-3x fa-times"></i>
-        </a>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2 class="text-secondary text-uppercase mb-0">Word Cloud about J.K Rowling's popularity in terms of reviews</h2>
-              <hr class="star-dark mb-5">
-              <div>
-                  <h3></h3>
-                  <!--svg id="Scatterplot"></svg-->
-                  <svg id="wordcount"></svg>
-              </div>
-              <!--img class="img-fluid mb-5" src="img/portfolio/reviewsandratings.png" alt=""-->
-              <p class="mb-5">We try to visualize the popularity of J.K. Rowling in terms of the reviews she got for her books. </p>
-              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
-                <i class="fa fa-close"></i>
-                Close Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -455,7 +159,6 @@ alt="">
     <script src="js/freelancer.min.js"></script>
     <script src="d3.js" ></script>
     <script src="https://rawgit.com/jasondavies/d3-cloud/master/build/d3.layout.cloud.js"></script>
-
     <script>
       let store = {}
       function loadData() {
@@ -541,9 +244,6 @@ alt="">
 
               currentData.Count += parseInt(currentData.rating)
 
-              // * currentData.ratingsCount
-              // console.log(parseInt(currentData.rating))
-
               result[d.author] = currentData
 
               return result;
@@ -573,6 +273,7 @@ alt="">
             .data(ratings)
             // console.log(bars);
 
+        //Adding a rect tag for each airline
         bars.enter().append("rect")
             .attr("height", yScale.bandwidth())
             .attr("y", (d) => yScale(d.AuthorName))
@@ -613,14 +314,6 @@ alt="">
               `translate(${margin.left}px,${height - margin.bottom}px)`
           )
           .call(axisX)
-          .append('text') // X-axis Label
-              // .attr('class','label')
-              .attr('y',10)
-              .attr('x',0)
-              // .attr('transform','rotate(-180)')
-              // .attr('dy','.71em')
-              .style('text-anchor','end')
-              .text('Annualized Standard Deviation')
 
         let axisY = d3.axisLeft(yScale)
         container.append("g")
@@ -654,8 +347,6 @@ alt="">
         // var colorScale = d3.scaleOrdinal(d3.category20)
                             // .range([0,400])
 
-
-
         var colorScale = d3.scaleSequential()
           .domain([0, ratings.length])
           .interpolator(d3.interpolateRainbow);
@@ -671,11 +362,6 @@ alt="">
           .range([bodyHeight, 0])
           //.append('text',"Average ratings")
           console.log("yMax: ", d3.max(ratings, d => parseInt(d.rating) ))
-
-        // Draw Axes
-        let scales = {xScale, yScale}
-        drawAxesforScatterplot(ratings, scales, config);
-
       	// SVG
       	var svg = container.append('svg')
       	    .attr('height', h + margin.top + margin.bottom)
@@ -685,6 +371,8 @@ alt="">
       	  .append('g')
       	    .attr('transform','translate(' + margin.left + ',' + margin.top + ')')
 
+
+        // Circles
         var circles = svg.selectAll('circle')
             .data(ratings)
             .enter()
@@ -713,35 +401,10 @@ alt="">
             .text(function (d) { return d.author +
                                  '\nRatingsCount: ' + d.ratingsCount +
                                  '\nAverage Rating: ' + d.rating })
-        // // X-axis
-        // svg.append('g')
-        //     .attr('class','axis')
-        //     .attr('transform', 'translate(' + margin.left + "," + h + ')')
-        //     // .attr('transform', 'translate(0,' + margin.bottom + 10 + ')')
-        //     .call(xAxis)
-        //   .append('text') // X-axis Label
-        //     .attr('class','label')
-        //     .attr('y',10)
-        //     .attr('x',0)
-        //     .attr('transform','rotate(-180)')
-        //     // .attr('dy','.71em')
-        //     .style('text-anchor','end')
-        //     .text('Annualized Standard Deviation')
-        // // Y-axis
-        // svg.append('g')
-        //     .attr('class', 'axis')
-        //     // .attr('transform', 'translate(' + margin.left + "," + margin.top + ')')
-        //     .call(yAxis)
-        //   .append('text') // y-axis Label
-        //     .attr('class','label')
-        //     // .attr('transform','rotate(-90)')
-        //     .attr('x',0)
-        //     .attr('y',10)
-        //     // .attr('dy','.71em')
-        //     .style('text-anchor','end')
-        //     .text('Annualized Return')
 
 
+        let scales = {xScale, yScale}
+        drawAxesforScatterplot(ratings, scales, config);
       }
       var words = []
 
@@ -843,7 +506,7 @@ alt="">
         // creating an array of words and computing a random size attribute.
         function getWords(i) {
             return words[i]
-                    .replace(/[!\.,:;?]|a|the|\.|/g, '')
+                    .replace(/[!\.,:;\?]|a|the|his|so|by|for|And|with|much|he's/g, '')
                     .split(' ')
                     .map(function(d) {
                         return {text: d, size: 10 + Math.random() * 60};
