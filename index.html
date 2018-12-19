@@ -459,7 +459,7 @@ alt="">
     <script>
       let store = {}
       function loadData() {
-        let promise = d3.csv("br.csv")
+        let promise = d3.csv("https://media.githubusercontent.com/media/NYU-VIS-FALL2018/storytelling-group-19/master/br.csv")
         return promise.then(ratings => {
             store.ratings = ratings
             return store;
